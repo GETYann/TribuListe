@@ -1,0 +1,81 @@
+Conditions d'utilisation de TribuListe
+Version 2.x — en vigueur depuis le 30 octobre 2026
+
+Le présent document régit l'utilisation de l'application TribuListe (liste de courses, cartes de fidélité, promos, historique et portail famille). En créant une famille, en rejoignant une famille existante ou en utilisant l'application, vous acceptez sans réserve les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, n'utilisez pas l'application.
+
+1. Éditeur du service
+Application	TribuListe — « la liste de courses de votre tribu ! »
+Éditeur	Pl@nB, [forme : particulier]
+Adresse	[]
+Contact	[yann.bri.82@gmail.com]
+Pays	[france]
+Hébergement	Firebase (Google Ireland Limited), région europe-west1
+
+2. Objet et description du service
+TribuListe est une application familiale et privée qui permet notamment de :
+
+créer ou rejoindre une famille identifiée par un code TRB-XXXXXX v1, avec OAuth v2 ;
+gérer une liste de courses partagée en temps réel entre les membres ;
+stocker des cartes de fidélité (noms de magasins et codes-barres) ;
+consulter et publier des offres promotionnelles ;
+conserver un historique des courses archivées et des produits favoris.
+L'application est destinée à un usage familial et non commercial. Elle est disponible sous forme d'application web et d'application mobile (Android et bientot iOS).
+
+3. Accès, compte et identifiants
+3.1. L'accès à une famille repose sur trois éléments : le code famille (TRB-XXXXXX) v1, un identifiant de membre et un mot de passe partagé au sein de la famille. Pas OAuth pour la v2
+
+3.2. Le mot de passe est commun à tous les membres de la famille v1. Chaque membre est personnellement responsable de la confidentialité de ce mot de passe et de tout usage fait à partir de ses identifiants.
+
+3.3. Le créateur de la famille est responsable de l'espace familial : il valide ou refuse les demandes d'adhésion et veille au bon usage de l'application par les membres qu'il a autorisés et les ajoute leur adresse mail en amont dans la v2. 
+
+3.4. Tout membre doit fournir des informations exactes et les tenir à jour, et ne peut créer qu'une famille légitime (usage familial).
+
+3.5. L'éditeur se réserve le droit de suspendre l'accès en cas d'usage contraire aux présentes conditions (voir article 7).
+
+4. Données personnelles
+4.1. Données collectées : les données saisies dans l'application (listes de courses, articles, prix, archives, cartes de fidélité et leurs codes-barres, identifiants de membres, nom de famille) sont stockées sur les serveurs Firebase de Google (projet tribuliste, région europe-west1), en lien avec les Politique de confidentialité de Google.
+
+4.2. Finalité : ces données servent uniquement au fonctionnement du service (synchronisation temps réel entre les appareils de la famille).
+
+4.3. Destinataires : les données d'une famille sont accessibles exclusivement aux membres validés de cette famille. Seules les offres promotionnelles sont partagées entre toutes les familles ; elles ne contiennent aucune donnée personnelle les identifiant.
+
+4.4. Revente, certaines données anonymisées peuvent faire l'objet de revente à des fins commercial à des tiers à des fins publicitaires ou commerciales.
+
+4.5. Conservation : les données sont conservées tant que la famille utilise le service. Chaque membre peut, à tout moment, supprimer les articles, archives et cartes qu'il a créés ; le créateur de la famille peut demander la suppression de l'intégralité de l'espace familial par simple demande au contact de l'éditeur.
+
+4.6. Droits (RGPD) : vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur vos données. Exercez-les en contactant l'éditeur (article 1). Une réponse vous sera apportée dans un délai maximal d'un mois.
+
+5. Propriété intellectuelle
+5.1. L'application TribuListe, son code source, sa charte graphique et sa documentation sont protégés par le droit de la propriété intellectuelle.
+
+5.2. Le code source est publié publiquement sur GitHub à des fins de consultation, de contribution et d'audit. Sa réutilisation est soumise à la licence indiquée dans le dépôt (à défaut, toute reproduction est soumise à l'accord préalable de l'éditeur).
+
+5.3. Les noms de magasins, enseignes et marques cités dans les référentiels de l'application (catégories, enseignes, promos) sont la propriété de leurs titulaires respectifs ; leur mention est purement indicative et ne constitue aucune affiliation ou endorsement.
+
+6. Engagements des utilisateurs
+En utilisant TribuListe, vous vous engagez à :
+
+utiliser l'application exclusivement à des fins personnelles et familiales ;
+ne pas tenter d'accéder aux données d'une famille autre que la vôtre, ni de contourner les mécanismes d'authentification ou de sécurité ;
+ne pas saisir de contenu illicite, diffamatoire ou portant atteinte aux droits de tiers ;
+ne pas utiliser le service pour du démarchage commercial, du spam ou toute activité illicite ;
+ne pas dégrader volontairement le fonctionnement du service (utilisation automatisée abusive, surcharge, etc.).
+7. Suspension et résiliation
+7.1. L'éditeur peut suspendre ou supprimer l'accès à une famille en cas de manquement aux présentes conditions, sans préjudice de tout autre recours.
+
+7.2. Tout utilisateur peut cesser d'utiliser le service à tout moment et demander la suppression de ses données via le contact de l'éditeur.
+
+8. Disponibilité et responsabilité
+8.1. Le service est fourni « en l'état », sans garantie de disponibilité continue. Des interruptions (maintenance, incident technique, panne réseau ou de l'hébergeur) peuvent survenir.
+
+8.2. L'éditeur ne saurait être tenu responsable : de la perte de données imputable à un défaut de sauvegarde de l'utilisateur, d'un usage abusif des identifiants partagés en famille, ni des dommages indirects résultant de l'utilisation du service.
+
+8.3. L'éditeur ne garantit pas l'exactitude des prix, promos ou informations produits saisies par les utilisateurs, ni la disponibilité des offres promotionnelles mentionnées.
+
+9. Modification des conditions
+L'éditeur peut modifier les présentes conditions à tout moment. La version en vigueur est celle publiée dans le dépôt GitHub du projet, avec sa date de mise à jour. L'utilisation continue du service après modification vaut acceptation des nouvelles conditions.
+
+10. Droit applicable
+Les présentes conditions sont régies par le droit français. À défaut de règlement amiable, tout litige relève de la compétence des tribunaux français.
+
+Contact : [yann.bri.82@gmail.com]
