@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TribuListe — la liste de courses de la famille</title>
+  <meta name="description" content="TribuListe est une application familiale de liste de courses partagée en temps réel : liste de courses, listes d'enseigne, cartes de fidélité, favoris, historique et promos. Sans publicité ni traceur.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:title" content="TribuListe — la liste de courses de la famille">
+  <meta property="og:description" content="Application familiale de liste de courses et de cartes de fidélité, partagée en temps réel avec votre tribu.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://getyann.github.io/TribuListe/">
+  <meta property="og:image" content="logo-tribuliste.png">
+</head>
+<body>
+
+  <header class="bandeau">
+    <div class="marque">
+      <img src="logo-tribuliste.png" alt="Logo de TribuListe" width="52" height="52">
+      <div>
+        <h1>TribuListe</h1>
+        <p class="baseline">La liste de courses de la famille</p>
+      </div>
+    </div>
+    <button class="bascule" type="button" aria-label="Changer de thème d'affichage">Thème : auto</button>
+  </header>
+
+  <main>
+
+    <section class="carte">
+      <h2>Vos courses, partagées avec toute la tribu</h2>
+      <p>
+        <strong>TribuListe</strong> est une application familiale et privée. Une famille crée un
+        espace unique identifié par un code <strong>TRB-XXXXXX</strong> : chacun de ses membres
+        ajoute, coche, archive et consulte les mêmes articles depuis son propre appareil,
+        <strong>en temps réel</strong>.
+      </p>
+      <p>
+        Pas de publicité, pas de traceur, pas de revente de données : uniquement ce qu'il faut
+        pour faire les courses ensemble. Les mots de passe ne sont jamais stockés en clair.
+      </p>
+      <div class="actions">
+        <a class="btn btn-menthe" href="https://github.com/GETYann/TribuListe">VOIR LE CODE SOURCE</a>
+        <a class="btn" href="confidentialite.html">POLITIQUE DE CONFIDENTIALITÉ</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Six onglets pour toute la famille</h2>
+      <div class="grille">
+        <div class="carte">
+          <h3>Courses</h3>
+          <p>La liste commune en temps réel : articles, quantités, prix, case à cocher et archivage en un ticket.</p>
+        </div>
+        <div class="carte">
+          <h3>Listes d'enseigne</h3>
+          <p>Répartissez les articles entre les magasins de votre choix, ou laissez-les dans la liste générale.</p>
+        </div>
+        <div class="carte">
+          <h3>Cartes de fidélité</h3>
+          <p>Vos cartes de magasin et leurs codes-barres, toujours dans votre poche, classées par groupe.</p>
+        </div>
+        <div class="carte">
+          <h3>Favoris</h3>
+          <p>Un simple appui sur un produit favori l'ajoute à la liste des courses.</p>
+        </div>
+        <div class="carte">
+          <h3>Historique</h3>
+          <p>Les courses archivées (magasin, articles, total) et le top 10 de vos produits les plus achetés.</p>
+        </div>
+        <div class="carte">
+          <h3>Promos</h3>
+          <p>Les offres promotionnelles partagées par toutes les familles, avec les jours restants.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="carte">
+      <h2>Comment ça marche</h2>
+      <ol class="etapes">
+        <li><strong>Créer une famille</strong> : l'application génère un code <strong>TRB-XXXXXX</strong> et ouvre un espace privé.</li>
+        <li><strong>Inviter la tribu</strong> : chaque membre rejoint la famille avec le code, son identifiant et le mot de passe partagé.</li>
+        <li><strong>Partager les courses</strong> : tout ce que l'un ajoute ou coche apparaît immédiatement chez les autres, sur tous les appareils.</li>
+      </ol>
+      <p class="note">
+        L'adhésion d'un nouveau membre est validée par le créateur de la famille. Chaque famille
+        n'accède qu'à son propre espace de données.
+      </p>
+    </section>
+
+    <section class="carte capture">
+      <h2>L'application</h2>
+      <img src="https://github.com/user-attachments/assets/40f665cb-bbca-40da-9989-2b45da6c4e25"
+           alt="Capture d'écran de l'application TribuListe : la liste des courses partagée de la famille"
+           loading="lazy" width="1024" height="1536">
+      <p class="note">Application Android et application web. iOS : bientôt.</p>
+    </section>
+
+    <section class="carte">
+      <h2>Informations et contact</h2>
+      <ul class="liens">
+        <li><a href="conditions.html">Conditions d'utilisation</a></li>
+        <li><a href="confidentialite.html">Politique de confidentialité (RGPD)</a></li>
+        <li><a href="https://github.com/GETYann/TribuListe">Dépôt GitHub du projet</a></li>
+        <li><a href="mailto:yann.bri.82@gmail.com">Contact de l'éditeur : yann.bri.82@gmail.com</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>TribuListe — édité par Pl@nB · <a href="mailto:yann.bri.82@gmail.com">yann.bri.82@gmail.com</a> · France</p>
+    <p>© 2026 TribuListe — application familiale gratuite, sans publicité ni traceur.</p>
+  </footer>
+
+  <script>
+    /* Bascule de thème : auto (système) → clair → sombre */
+    (function () {
+      var bouton = document.querySelector('.bascule');
+      var cle = 'theme-site-tribuliste';
+      var modes = ['', 'light', 'dark'];
+      var libelles = { '': 'auto', 'light': 'clair', 'dark': 'sombre' };
+      var memorise = localStorage.getItem(cle);
+      if (memorise === 'light' || memorise === 'dark') {
+        document.documentElement.setAttribute('data-theme', memorise);
+      }
+      function majLibelle() {
+        var actuel = document.documentElement.getAttribute('data-theme') || '';
+        bouton.textContent = 'Thème : ' + libelles[actuel];
+      }
+      bouton.addEventListener('click', function () {
+        var actuel = document.documentElement.getAttribute('data-theme') || '';
+        var suivant = modes[(modes.indexOf(actuel) + 1) % modes.length];
+        if (suivant) { document.documentElement.setAttribute('data-theme', suivant); }
+        else { document.documentElement.removeAttribute('data-theme'); }
+        localStorage.setItem(cle, suivant);
+        majLibelle();
+      });
+      majLibelle();
+    })();
+  </script>
+
+</body>
+</html>

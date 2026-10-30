@@ -1,0 +1,220 @@
+/* Feuille de style du site TribuListe
+   Palette identique à celle de l'application (thème sombre par défaut). */
+
+:root {
+  --fond: #0D1117;
+  --surface: #161B22;
+  --bordure: #333B45;
+  --texte: #E6EDF3;
+  --texte2: #9DA8B4;
+  --accent: #4D97FF;
+  --accent-actif: #1F6FEB;
+  --succes: #3FB950;
+  --danger: #FF6B63;
+  --menthe: #00BFA6;
+  --ambre: #E8A100;
+  --rayon: 14px;
+  --rayon-petit: 8px;
+}
+
+/* Thème clair : réglage automatique selon le système, ou forcé par le bouton */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --fond: #F6F8FA;
+    --surface: #FFFFFF;
+    --bordure: #C9D1D9;
+    --texte: #1F2328;
+    --texte2: #55606C;
+  }
+}
+
+:root[data-theme="light"] {
+  --fond: #F6F8FA;
+  --surface: #FFFFFF;
+  --bordure: #C9D1D9;
+  --texte: #1F2328;
+  --texte2: #55606C;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; }
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-actif); }
+
+/* ---------- Bandeau ---------- */
+
+.bandeau {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
+  border-bottom: 1px solid var(--bordure);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.marque { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.marque img { width: 52px; height: 52px; border-radius: var(--rayon-petit); }
+
+.marque h1 {
+  margin: 0;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--accent);
+}
+
+.baseline { margin: 0; font-size: 13px; color: var(--texte2); }
+
+.bascule {
+  flex: none;
+  background: var(--fond);
+  color: var(--texte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon-petit);
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.bascule:hover { border-color: var(--accent); }
+
+/* ---------- Contenu ---------- */
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 16px 12px 48px;
+  display: grid;
+  gap: 16px;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 24px;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+
+h3 { font-size: 17px; margin: 20px 0 6px; }
+
+.carte {
+  background: var(--surface);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 16px;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .grille { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 900px) {
+  .grille { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.grille .carte h3 { margin-top: 0; color: var(--texte); }
+.grille .carte p { margin: 0; color: var(--texte2); font-size: 15px; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+.btn {
+  display: inline-block;
+  min-height: 44px;
+  line-height: 44px;
+  padding: 0 18px;
+  border-radius: var(--rayon-petit);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  text-align: center;
+}
+
+.btn:hover { background: var(--accent); color: #FFFFFF; }
+
+.btn-menthe {
+  background: var(--menthe);
+  border-color: var(--menthe);
+  color: #0D1117;
+}
+
+.btn-menthe:hover { background: #00A18C; border-color: #00A18C; color: #FFFFFF; }
+
+.etapes { margin: 0; padding-left: 22px; }
+.etapes li { margin-bottom: 8px; }
+.etapes strong { color: var(--accent); }
+
+.capture { text-align: center; }
+.capture img {
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  max-height: 620px;
+  object-fit: contain;
+}
+
+.note { color: var(--texte2); font-size: 14px; }
+
+.liens { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.liens a { text-decoration: none; font-weight: 600; }
+.liens a:hover { text-decoration: underline; }
+
+/* ---------- Pages légales ---------- */
+
+.retour { display: inline-block; margin-bottom: 4px; text-decoration: none; }
+
+.entete-legale p { margin: 0 0 4px; color: var(--texte2); font-size: 14px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+th, td {
+  border: 1px solid var(--bordure);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); }
+
+ul.points { padding-left: 20px; }
+ul.points li { margin-bottom: 6px; }
+
+.droite { color: var(--texte2); }
+
+/* ---------- Pied de page ---------- */
+
+footer {
+  border-top: 1px solid var(--bordure);
+  padding: 20px 16px 32px;
+  text-align: center;
+  color: var(--texte2);
+  font-size: 14px;
+}
+
+footer p { margin: 4px 0; }
