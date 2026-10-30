@@ -1,3 +1,4 @@
+<img width="1254" height="1254" alt="TribuListe _ les courses en famille" src="https://github.com/user-attachments/assets/0807db6b-a26a-406c-9e6b-d51518b67b3e" />
 # TribuListe
 Application Android de liste de courses / carte fidélité et + partagé avec ta tribu ! 
 
