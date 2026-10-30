@@ -1,0 +1,87 @@
+Politique de confidentialité de TribuListe
+Version 1.0 — en vigueur depuis le 30 octobre 2026
+
+La présente politique décrit quelles données sont traitées par l'application TribuListe, pour quelles finalités, pendant combien de temps et quels sont vos droits. Elle complète les Conditions d'utilisation.
+
+1. Responsable du traitement
+Application	TribuListe
+Responsable du traitement	[Pl@nb]
+Contact	[yann.bri.82@gmail.com]
+Pays	[france]
+Toute question ou demande relative à vos données se fait par e-mail à l'adresse ci-dessus.
+
+2. Données traitées
+2.1 Données d'identification familiale
+Code famille (TRB-XXXXXX), identifiant de membre, prénom, nom de famille saisi par le créateur dans la v1;
+empreinte (hash SHA-256) du mot de passe partagé en famille — le mot de passe lui-même n'est jamais stocké;
+identifiants techniques de compte (compte de secours attribué par Firebase Authentication, sans adresse e-mail réelle de votre part).
+2.2 Données de contenu saisies dans l'application
+articles de la liste de courses (nom, quantité, prix, liste d'enseigne) ;
+historique et archives de courses (enseigne, articles, total, membre ayant fait les courses) ;
+cartes de fidélité : nom du magasin et code-barres que vous choisissez d'enregistrer ;
+favoris, listes enregistrées, produits maison ;
+offres promotionnelles que vous publiez (partagées avec toutes les familles, sans donnée personnelle).
+2.2 bis Données techniques locales (appareil)
+Stockées uniquement sur votre appareil (localStorage / préférences) :
+
+Clé	Contenu
+session-tribuliste	code famille, identifiant, prénom, jetons de session
+theme	thème sombre ou clair
+tribuliste-profil-initialise, tribuliste-electeur	réglages d'interface
+Aucune donnée de ces clés n'est transmise à un tiers.
+
+2.3 Données collectées automatiquement
+Journaux techniques : aucune analyse d'audience, aucun outil de mesure d'audience, aucune publicité, aucun traceur tiers (cookies de suivi) ne sont utilisés.
+Lors du chargement de l'application web, votre adresse IP peut être transmise aux services qui servent les fichiers de l'application : Google Firebase Hosting, Google (bibliothèques Firebase), jsDelivr et Hugging Face (bibliothèques d'analyse de ticket) — dans la limite technique de toute requête HTTP.
+2.4 Traitement d'image (analyse de ticket)
+L'analyse de ticket s'exécute localement dans votre navigateur ou sur votre appareil (modèle embarqué, transformers.js / ONNX Runtime Web). Aucune image de ticket n'est envoyée à un serveur d'intelligence artificielle ni à un service tiers.
+
+3. Finalités et bases légales
+Finalité	Base légale
+Fournir le service (partage temps réel des listes, cartes, historique)	Exécution du contrat (art. 6.1.b RGPD)
+Gérer les comptes, l'authentification et la sécurité	Exécution du contrat + intérêt légitime (art. 6.1.f)
+Afficher les offres promotionnelles partagées	Intérêt légitime
+Répondre à vos demandes (droits, contact)	Obligation légale
+Aucune donnée n'est utilisée à des fins publicitaires, commerciales ou de profilage, et aucune n'est vendue ni louée.
+
+4. Destinataires et sous-traitants
+Destinataire	Rôle	Localisation des données
+Google Ireland Limited — Firebase Authentication, Firebase Realtime Database	Hébergement de la base de données et de l'authentification	Union européenne, région europe-west1 (Belgique)
+Google Ireland Limited — Firebase Hosting	Livraison de l'application web	Union européenne
+jsDelivr / Hugging Face / Google (gstatic)	Livraison de fichiers JavaScript	Réseau mondial (fichiers statiques uniquement)
+Google agit comme sous-traitant au sens du RGPD ; ses engagements figurent dans les Conditions de service de Google Cloud et sa Politique de confidentialité.
+
+Aucune autre destinataire ne reçoit vos données. Les données d'une famille ne sont visibles que par les membres validés de cette famille (règles de sécurité propres à la base).
+
+5. Transferts hors de l'Union européenne
+Le traitement principal est situé dans l'Union européenne (région europe-west1). Pour les services de livraison de fichiers statiques (listés au §4), des accès techniques depuis des pays tiers sont possibles selon les garanties contractuelles de leurs fournisseurs (clauses contractuelles types de la Commission européenne).
+
+6. Durées de conservation
+Donnée	Durée sont conservées le temps d'utilisation du compte, qui peut etre detruit par le créateur depuis le profil.
+Contenu d'une famille (listes, cartes, historique, archives)	Jusqu'à la suppression par un membre ou sur demande au contact de l'éditeur
+Comptes d'authentification et empreintes	Jusqu'à suppression de la famille ou de la fiche membre
+Jetons de session	Durée courte (1 h, renouvelés automatiquement) ; purgés à la déconnexion
+Offres promotionnelles publiées	Jusqu'à expiration de l'offre ou suppression par leur auteur
+Données locales de l'appareil (localStorage)	Jusqu'à effacement du site par l'utilisateur (données locales uniquement)
+7. Cookies et traceurs
+TribuListe n'utilise aucun cookie publicitaire ni traceur d'audience. Les seuls stockages employés sont ceux, techniques, listés au §2.3, qui restent sur votre appareil.
+
+8. Sécurité
+mots de passe jamais stockés en clair (hash SHA-256 de l'empreinte) ;
+communications chiffrées (HTTPS/TLS) ;
+règles d'accès au niveau de la base : chaque famille n'accède qu'à son propre arbre de données ; les écritures sont liées au compte authentifié ;
+toute saisie est relue et validée avant écriture.
+Aucun système n'étant infaillible, signalez toute vulnérabilité au contact de l'article 1 ; elle sera traitée en priorité.
+
+9. Vos droits (RGPD)
+Vous disposez des droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité sur vos données, ainsi que du droit de définir des directives relatives à leur sort après votre décès.
+
+Pour les exercer : [adresse e-mail de contact] — réponse sous un mois. Si la réponse ne vous satisfait pas, vous pouvez introduire une réclamation auprès de la CNIL (ou de l'autorité de contrôle de votre pays de résidence).
+
+10. Mineurs
+TribuListe est un outil familial destiné à être utilisé sous la responsabilité d'un adulte. La création d'une famille suppose d'être en mesure de contracter. Si des données d'un mineur ont été saisies sans le consentement de son responsable légal, demandez leur suppression au contact de l'article 1.
+
+11. Évolution de la politique
+La version en vigueur est celle publiée dans le dépôt GitHub du projet, avec sa date de mise à jour. Toute modification substantielle sera signalée par la mise à jour de cette date.
+
+Contact : [yann.bri.82@gmail.com]
